@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Hello World</h1>
+<p>Using Templates</p>
+<p>{{text}}</p>
+<ul>
+	{% for list_part in list %}
+		{%if list_part == 12 %}
+			<li>{{forloop.counter}} - {{list_part}} (is 12 number)</li>
+		{% else %}
+		<li>{{forloop.counter}} - {{list_part}}</li>
+	{% endif %}
+	{%endfor%}
+</ul>
+{%endblock%}
